@@ -8,11 +8,17 @@ def list_to_int(lst: list) -> int:
     Returns:
         int: The integer formed by concatenating the elements of the list.
     """
+    # A variable to hold the resulting integer
     my_int = 0
+    
+    # Iterate through each element in the list
     for i in lst:
+
         # Ensure the element is an integer before using it
         if not isinstance(i, int):
             raise ValueError(f"{i} is not an integer.")
+        
+        # Multiply the current integer by 10 and add the next digit
         my_int = my_int * 10 + i
     return my_int
 
